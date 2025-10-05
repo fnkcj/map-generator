@@ -16,14 +16,14 @@ Currently the project uses a random number generator to determine most things.
 At every point where this happens, you can also set up boundaries of which the random number is selected, or even force it to be a fixed value.
 
 Everything begins by first determining the generation volume. This is an area in the map in which the tool can generate objects into.
-This done by a chunk based system, where it first generates a cube, which you are then able to place on a grid, creating an area for the generation.
+This is done by a chunk based system, where it first generates a cube, which you are then able to place on a grid, creating an area for the generation.
 You can even place special start and end markers to form a linear path and place walls to block and guide the player.
 
 Once the generation area is determined, the tool will generate the objects within it.
 These are things like bounces, platforms and lights.
 It generates the density of these objects per chunk, and creates the needed prefab imports for them.
-Based on the total import count, it generates the prefabs themselves, meaning every import has a unique size, shape and rotation with texturing and for the lights things like radius and intensity are generated.
+Based on the total import count, it generates the prefabs themselves, meaning every import has a unique size, shape, rotation and texturing and for the lights things like color, radius and intensity.
 
-Finally the worldspawn is generated and the map source files are packaged into a .zip file which you can then extract into your CoD4 directory and compile the map.
+Finally the worldspawn settings, skybox and other essential entities are generated and the map source files are packaged into a .zip file which you can then extract into your CoD4 directory and compile the map.
 
 Currently setting up a map like `mp_cjmg1` from nothing takes less than 5 minutes with compile times included.
